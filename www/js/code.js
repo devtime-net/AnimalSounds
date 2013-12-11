@@ -1,12 +1,13 @@
 function playSound(animal){
-    var soundFile = null;
+    var media = null;
 	if (animal == "cow") {
-		soundFile = "cow.wav";
+		media = new Media("cow.wav",null,null);
 	} else if(animal == "sheep"){
-		soundFile = "sheep.wav";
+		media = new Media("sheep.wav",null,null);
 	}
 	
-	if (soundFile != null){
-	  document.getElementById("Sound").innerHTML = "<embed src=\"" + soundFile + "\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+	if (media != null){
+		media.play();
+	  //document.getElementById("Sound").innerHTML = "<embed src=\"" + soundFile + "\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
 	}
 };
