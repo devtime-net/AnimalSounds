@@ -1,9 +1,9 @@
 function playSound(animal){
     var media = null;
 	if (animal == "cow") {
-		media = new Media("cow.wav",null,null);
+		media = new Media("/android_asset/www/cow.wav",null,null);
 	} else if(animal == "sheep"){
-		media = new Media("sheep.wav",null,null);
+		media = new Media("/android_asset/www/sheep.wav",null,null);
 	}
 	
 	if (media != null){
