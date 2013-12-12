@@ -4,10 +4,6 @@ function playSound(animal){
 		return;
 	}
     disableTouch = true;
-	var callback = new function(){
-		disableTouch = false;
-		alert('done');
-	};
-	var media = new Media("/android_asset/www/sounds/" + animal + ".wav",callback,callback);	
+	var media = new Media("/android_asset/www/sounds/" + animal + ".wav", new function(){disableTouch = false;},new function(){disableTouch=false;});	
 	media.play();
 };
